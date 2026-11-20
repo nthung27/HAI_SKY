@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17112f">
+
+    <title>Happy Birthday Lê Đức Hải - 25 Tuổi 🎂</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="img/hai.jpg">
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <div class="floaties" aria-hidden="true">
+        <span>🎈</span>
+        <span>✨</span>
+        <span>🎉</span>
+        <span>💖</span>
+        <span>🎈</span>
+        <span>⭐</span>
+    </div>
+
+    <main class="shell">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div class="brand">
+                ✨ NTH2705
+            </div>
+
+            <div class="top-actions">
+                <button class="sound-toggle" id="musicToggle">
+                    🎵 Nhạc: bật
+                </button>
+
+                <button class="sound-toggle" id="soundToggle">
+                    🔊 Âm thanh: bật
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- ================================= -->
+        <!-- 1. MÀN HÌNH CHÀO MỪNG -->
+        <!-- ================================= -->
+
+        <section class="screen active" id="welcome">
+
+            <div class="eyebrow">
+                ⚠️ CẢNH BÁO: ĐÀN ÔNG 25 TUỔI XUẤT HIỆN!
+            </div>
+
+            <div class="photo-frame" id="photoFrame">
+
+                <div class="photo-placeholder">📸</div>
+
+                <img id="personPhoto" alt="Lê Đức Hải - Sinh nhật 25 tuổi">
+
+                <span class="photo-caption">LÊ ĐỨC HẢI - CEO HỆ BÁO</span>
+
+            </div>
+
+            <label class="upload-label" for="photoInput">
+                📷 Chọn ảnh chân dung Đức Hải
+            </label>
+
+            <input
+                id="photoInput"
+                type="file"
+                accept="image/*"
+                hidden
+            >
+
+            <h1>
+                HAPPY<br>
+                <span>BIRTHDAY!</span>
+            </h1>
+
+            <p class="lead">
+                Hôm nay là ngày một huyền thoại ra đời!<br>
+                Chính thức bước sang tuổi 25...
+                nhưng độ báo vẫn chưa có dấu hiệu giảm! 🤡
+            </p>
+
+            <div class="name-chip">
+                Nhân vật chính:
+                <strong id="displayName">Lê Đức Hải</strong>
+            </div>
+
+            <button class="primary-btn" id="startBtn">
+                BẮT ĐẦU NHẬN QUÀ
+                <span>🚀</span>
+            </button>
+
+            <p class="tiny">
+                * Nhớ bật loa để nghe nhạc và lời chúc nhé.
+            </p>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 2. MÀN HÌNH TROLL -->
+        <!-- ================================= -->
+
+        <section class="screen" id="troll">
+
+            <div class="step-label">
+                KIỂM TRA NHÂN PHẨM ĐÀN ÔNG 25 TUỔI 🤨
+            </div>
+
+            <div class="big-emoji">😈</div>
+
+            <h2>
+                Hải có muốn nhận lời chúc sinh nhật không?
+            </h2>
+
+            <p class="sub">
+                Chọn thật cẩn thận.
+                Nút từ chối hơi... nhát gan đấy!
+            </p>
+
+            <div class="no-stage">
+
+                <button class="answer-btn" id="yesBtn">
+                    CÓ CHỨ, QUÁ MUỐN! 😍
+                </button>
+
+                <button class="answer-btn secondary" id="noBtn">
+                    KHÔNG THÈM 🙄
+                </button>
+
+            </div>
+
+            <p class="tiny" id="noHint">
+                Thử bắt nút KHÔNG xem nào 😏
+            </p>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 3. MÀN HÌNH TRẮC NGHIỆM -->
+        <!-- ================================= -->
+
+        <section class="screen" id="quiz">
+
+            <div class="progress">
+                <span id="progressBar"></span>
+            </div>
+
+            <div class="step-label" id="quizStep">
+                NHIỆM VỤ 01 / 03
+            </div>
+
+            <div class="big-emoji" id="quizEmoji">
+                🤔
+            </div>
+
+            <h2 id="question">
+                Hải có công nhận hôm nay mình đẹp trai nhất không?
+            </h2>
+
+            <p class="sub" id="questionSub">
+                Trả lời thật lòng nhé, camera đang ghi hình đó!
+            </p>
+
+            <div class="answers" id="answers">
+
+                <button class="answer-btn" data-answer="yes">
+                    TẤT NHIÊN RỒI 😎
+                </button>
+
+                <button class="answer-btn secondary" data-answer="no">
+                    KHÔNG, TÔI KHIÊM TỐN 🙈
+                </button>
+
+            </div>
+
+            <p class="tiny" id="quizFeedback" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 4. MÀN HÌNH BÓC PHỐT -->
+        <!-- ================================= -->
+
+        <section class="screen" id="roast">
+
+            <div class="step-label">
+                HỒ SƠ MẬT CỦA LÊ ĐỨC HẢI ĐƯỢC GIẢI MÃ 🗂️
+            </div>
+
+            <div class="big-emoji">🕵️</div>
+
+            <h2>
+                25 NĂM CUỘC ĐỜI - BAO NHIÊU PHA ĐI VÀO LÒNG ĐẤT?
+            </h2>
+
+            <p class="sub">
+                Những tư liệu tuyệt mật về thanh niên Đức Hải
+                cuối cùng cũng bị khai quật!
+            </p>
+
+            <div class="roast-card">
+
+                <div class="roast-photo" id="roastPhoto">
+                    👶
+                </div>
+
+                <div class="stamp">
+                    TÀI LIỆU MẬT
+                </div>
+
+                <ul>
+                    <li>
+                        📌 Ngày bé từng mơ lớn lên làm đại gia,
+                        25 tuổi vẫn đang chờ tài khoản báo số dư.
+                    </li>
+
+                    <li>
+                        📌 Miệng nói trưởng thành nhưng gặp đồ ăn ngon
+                        là vui như trúng số.
+                    </li>
+
+                    <li>
+                        📌 Từng tuyên bố không yêu đương linh tinh,
+                        nhưng thấy gái xinh là quên hết lời thề.
+                    </li>
+
+                    <li>
+                        📌 25 tuổi: tuổi trẻ có thừa,
+                        tiền bạc thì đang trong quá trình tích lũy. 🤣
+                    </li>
+
+                    <li>
+                        📌 Độ đẹp trai tự đánh giá 10/10,
+                        còn người khác đánh giá thì chưa rõ! 😎
+                    </li>
+                </ul>
+
+                <p class="roast-note">
+                    * Hồ sơ được tổng hợp bởi hội bạn thân.
+                    Mọi sự trùng hợp đều không phải ngẫu nhiên!
+                </p>
+
+            </div>
+
+            <button class="primary-btn" id="toGiftBtn">
+                THÔI ĐỪNG BÓC PHỐT NỮA 😭
+            </button>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 5. MÀN HÌNH QUÀ TẶNG -->
+        <!-- ================================= -->
+
+        <section class="screen" id="gift">
+
+            <div class="step-label">
+                NHIỆM VỤ TUỔI 25 HOÀN THÀNH 🎖️
+            </div>
+
+            <h2>
+                Phần thưởng dành riêng cho Đức Hải!
+            </h2>
+
+            <p class="sub">
+                Nhấn vào hộp quà để khám phá.
+                Không có hóa đơn đâu... chắc vậy. 😏
+            </p>
+
+            <button
+                class="gift-box"
+                id="giftBox"
+                aria-label="Mở hộp quà"
+            >
+
+                <span class="gift-bow">🎀</span>
+
+                <span class="gift-icon">🎁</span>
+
+            </button>
+
+            <p class="tiny" id="giftHint">
+                CHẠM ĐỂ MỞ QUÀ
+            </p>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 6. MÀN HÌNH BÁNH SINH NHẬT -->
+        <!-- ================================= -->
+
+        <section class="screen" id="cake">
+
+            <div class="step-label">
+                QUÀ ĐẶC BIỆT ĐÃ MỞ 🎁
+            </div>
+
+            <h2>
+                HAPPY 25TH BIRTHDAY, HẢI! 🥳
+            </h2>
+
+            <p class="sub">
+                25 tuổi rồi, hãy ước một điều thật lớn
+                rồi thổi nến đi nào!
+            </p>
+
+            <div class="cake-wrap">
+
+                <div class="candles">
+
+                    <button class="candle" aria-label="Thổi nến 1">
+                        🕯️
+                    </button>
+
+                    <button class="candle" aria-label="Thổi nến 2">
+                        🕯️
+                    </button>
+
+                    <button class="candle" aria-label="Thổi nến 3">
+                        🕯️
+                    </button>
+
+                </div>
+
+                <div class="cake-top">
+                    🍓 🍒 🍓
+                </div>
+
+                <div class="cake-layer">
+                    🎂
+                </div>
+
+                <div class="cake-plate"></div>
+
+            </div>
+
+            <button class="primary-btn" id="blowBtn">
+                THỔI NẾN NGAY 💨
+            </button>
+
+            <p class="tiny" id="blowHint">
+                Bấm nút hoặc nhấn phím cách để thổi nến.
+            </p>
+
+        </section>
+
+
+        <!-- ================================= -->
+        <!-- 7. MÀN HÌNH LỜI CHÚC CUỐI -->
+        <!-- ================================= -->
+
+        <section class="screen" id="final">
+
+            <div class="final-confetti">
+                🎊 🎉 🎊
+            </div>
+
+            <div class="hero-emoji">💖</div>
+
+            <div class="eyebrow">
+                THÔNG BÁO ĐẶC BIỆT TỪ VŨ TRỤ
+            </div>
+
+            <h1>
+                HAPPY<br>
+                <span>BIRTHDAY!</span>
+            </h1>
+
+            <p class="wish" id="finalWish"></p>
+
+            <div class="wish-card">
+
+                <p>📜 GIẤY CHỨNG NHẬN</p>
+
+                <strong>
+                    LÊ ĐỨC HẢI - CHÍNH THỨC 25 TUỔI
+                </strong>
+
+                <span>
+                    Đã trưởng thành trên giấy tờ,
+                    còn thực tế thì cần xem xét thêm! 🤣
+                </span>
+
+            </div>
+
+            <div class="final-actions">
+
+                <button class="primary-btn" id="speakBtn">
+                    🔊 NGHE LỜI CHÚC
+                </button>
+
+                <button class="primary-btn" id="replayBtn">
+                    CHƠI LẠI 🔄
+                </button>
+
+            </div>
+
+            <p class="tiny">
+                Made with ❤️ dành riêng cho Lê Đức Hải.
+                Chúc mừng sinh nhật tuổi 25!
+            </p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            © <span id="year"></span>
+            NTH2705 ·
+            Một chiếc web nhỏ, một niềm vui to.
+        </footer>
+
+    </main>
+
+
+    <!-- THÔNG BÁO -->
+    <div class="toast" id="toast" role="status"></div>
+
+    <!-- CANVAS HIỆU ỨNG -->
+    <canvas id="confetti"></canvas>
+
+    <!-- AUDIO -->
+    <audio id="birthdayAudio" preload="auto"></audio>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
